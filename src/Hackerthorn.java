@@ -5,11 +5,11 @@ import org.json.simple.*;
 import java.util.StringTokenizer;
 public class Hackerthorn {
 	public static void main(String[] args) throws IOException, SQLException {
-		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hackthn","root","UNvillage");
+		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/CPU","root","UNvillage");
 		System.out.println("Database connection successful!");
 		Statement stm=conn.createStatement();
 		stm.executeUpdate("create table CPU(transaction varchar(64),time DECIMAL(10,2));");
-		System.out.println("\n Table created\n");
+		System.out.println("\n---Table created---\n");
 		File file = new File("input.txt");
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String eachline;
@@ -18,7 +18,7 @@ public class Hackerthorn {
 		JSONObject obj=new JSONObject();
 		JSONObject obj1=new JSONObject();
 		JSONObject obj2=new JSONObject();
-		System.out.println("Inserting Values into the Database.. Please Wait...");
+		System.out.println("Inserting Values into the Database");
 		while((eachline=br.readLine())!=null)
 		{	
 			transaction++;
@@ -53,6 +53,6 @@ public class Hackerthorn {
 		FileWriter file1=new FileWriter("output.json");
 		file1.write(arr.toString());
 		file1.close();
-		System.out.println("\nData Added Successfully!\n");
+		System.out.println("\n Data Added Successfully\n");
 	}
 }
