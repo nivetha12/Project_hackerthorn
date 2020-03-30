@@ -22,10 +22,8 @@ public class Hackerthorn {
 		double max=0;
 		int lineno = 0;
 		String line;
-		int i=0;
 		Connection myConn = null;
 		Statement myStmt = null;
-		ResultSet myRs = null;
 
 		try {
 			br = new BufferedReader(new FileReader("C:\\Users\\RDX\\Desktop\\memory.txt"));
