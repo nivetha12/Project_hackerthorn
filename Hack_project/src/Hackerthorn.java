@@ -21,7 +21,6 @@ public class Hackerthorn {
 		double avg=0;
 		double max=0;
 		int lineno = 0;
-		String val="";
 		String line;
 		int i=0;
 		Connection myConn = null;
